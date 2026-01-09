@@ -46,20 +46,26 @@
     <h2>OUVIR, MUDAR, EVOLUIR UNIMED</h2>
   </section>
 
-  <!-- BLOCO 4 – PRESIDENTE -->
-  <section class="bloco presidente">
-    <div class="conteudo presidente-conteudo">
+<!-- BLOCO 4 – LIDERANÇA (SLIDER) -->
+<section class="bloco presidente">
+  <div class="conteudo presidente-slider">
+
+    <!-- SETA ESQUERDA -->
+    <button class="arrow left" onclick="prevSlide()">‹</button>
+
+    <!-- CARD -->
+    <div class="card-presidente">
 
       <img
+        id="foto"
         src="components/images/IZABELA-FOTO 1.svg"
-        alt="Dra. Izabela Parente"
+        alt="Foto do médico"
       />
 
       <div class="presidente-texto">
-        <span class="cargo">Presidente</span>
-        <h2>Dra. Izabela Parente</h2>
-
-        <p>
+        <span class="cargo" id="cargo">Presidente</span>
+        <h2 id="nome">Dra. Izabela Parente</h2>
+        <p id="descricao">
           Médica Pediatra Neonatologista, com sólida experiência em
           gestão cooperativista, atuando de forma ética e comprometida
           com o fortalecimento da Unimed.
@@ -67,7 +73,13 @@
       </div>
 
     </div>
-  </section>
+
+    <!-- SETA DIREITA -->
+    <button class="arrow right" onclick="nextSlide()">›</button>
+
+  </div>
+</section>
+
 
   
 
@@ -132,7 +144,7 @@
           <img src="components/images/facebook.png" alt="Facebook">
         </a>
 
-        <a href="#" aria-label="Instagram">
+        <a href="https://www.instagram.com/chapa1unimed/" aria-label="Instagram">
           <img src="components/images/instagram.png" alt="Instagram">
         </a>
 
@@ -143,6 +155,50 @@
 
     </div>
   </section>
+<script>
+  const slides = [
+    {
+      foto: "components/images/IZABELA-FOTO 1.svg",
+      cargo: "Presidente",
+      nome: "Dra. Izabela Parente",
+      descricao:
+        "Médica Pediatra Neonatologista, com sólida experiência em gestão cooperativista, atuando de forma ética e comprometida com o fortalecimento da Unimed."
+    },
+    {
+      foto: "components/images/MEDICO-2.png",
+      cargo: "Diretor Administrativo",
+      nome: "Dr. Lucas Gonzaga",
+      descricao:
+        "Médico Radiologista, com forte atuação na gestão administrativa e no fortalecimento da cooperativa."
+    },
+    {
+      foto: "components/images/MEDICO-3.png",
+      cargo: "Diretor Técnico",
+      nome: "Dr. Tiago Gomes",
+      descricao:
+        "Médico Ortopedista e Traumatologista, comprometido com a qualidade assistencial e inovação."
+    }
+  ];
+
+  let index = 0;
+
+  function updateSlide() {
+    document.getElementById("foto").src = slides[index].foto;
+    document.getElementById("cargo").innerText = slides[index].cargo;
+    document.getElementById("nome").innerText = slides[index].nome;
+    document.getElementById("descricao").innerText = slides[index].descricao;
+  }
+
+  function nextSlide() {
+    index = (index + 1) % slides.length;
+    updateSlide();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlide();
+  }
+</script>
 
 </body>
 </html>

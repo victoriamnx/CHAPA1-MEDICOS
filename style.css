@@ -224,84 +224,52 @@ img {
     max-width: 280px;
   }
 }
-
-
-/* =========================
-   BLOCO CONSELHOS COMPLETO
-========================= */
-.conselhos-completo {
-  background-color: var(--off-white);
+/* SLIDER PRESIDENTE */
+.presidente-slider {
+  justify-content: center;
+  gap: 32px;
 }
 
-/* faixa verde com fotos */
-.conselhos-fotos {
-  background-color: var(--verde-medio);
-  padding: 20px 0;
-}
-
-.conselhos-fotos img {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* textos */
-.conselhos-textos {
-  align-items: flex-start;
-  padding: 64px 24px;
-}
-
-.conselhos-textos .coluna {
-  flex: 1;
-}
-
-.conselhos-textos h3 {
-  color: var(--verde-medio);
-  font-size: 22px;
-  margin-bottom: 20px;
-}
-
-.conselhos-textos p {
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  color: var(--texto-escuro);
-}
-
-/* =========================
-   BLOCO #EUVOTOCHAPA1
-========================= */
-.voto {
+.card-presidente {
+  display: flex;
+  align-items: center;
+  gap: 40px;
   background: linear-gradient(
     to right,
-    var(--verde-escuro),
+    var(--verde-medio),
     var(--verde-limao)
   );
-  padding: 60px 24px;
-  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 900px;
 }
 
-.voto h2 {
-  color: var(--branco);
+.card-presidente img {
+  background-color: var(--verde-limao);
+  padding: 16px;
+  border-radius: 14px;
+  width: 240px;
+}
+
+.arrow {
+  background: none;
+  border: none;
   font-size: 48px;
-  font-weight: 800;
+  color: var(--verde-escuro);
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.voto h2 span {
-  color: var(--verde-limao);
+.arrow:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
 }
 
-/* =========================
-   RESPONSIVO CONSELHOS
-========================= */
+.arrow:focus {
+  outline: none;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
-
-  .conselhos-textos {
+  .card-presidente {
     flex-direction: column;
-    text-align: center;
-  }
-
-  .voto h2 {
-    font-size: 34px;
-  }
-}
