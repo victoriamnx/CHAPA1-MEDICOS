@@ -1,25 +1,29 @@
 /* =========================
-   VARIÁVEIS DE CORES
+   VARIÁVEIS
 ========================= */
 :root {
   --verde-escuro: #0b5f00;
   --verde-medio: #0f8a00;
   --verde-limao: #8fe000;
-  --verde-cta: #1aa800;
   --off-white: #f2f1ec;
   --branco: #ffffff;
-  --rosa-claro: #fde7ee;
   --texto-claro: #ffffff;
   --texto-escuro: #1e1e1e;
 }
 
 /* =========================
-   RESET E BASE
+   RESET
 ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -33,13 +37,28 @@ img {
   display: block;
 }
 
-section {
+/* =========================
+   ESTRUTURA BASE
+========================= */
+.bloco {
   width: 100%;
 }
 
-#container {
-  max-width: 1440px;
+.conteudo {
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.centralizado {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 /* =========================
@@ -50,7 +69,7 @@ section {
 }
 
 .bloco-hero img {
-  width: 100%;
+  width: 100vw;
 }
 
 /* =========================
@@ -62,46 +81,42 @@ section {
     var(--verde-escuro),
     var(--verde-limao)
   );
-  padding: 72px 24px;
+  padding: 80px 0;
   color: var(--texto-claro);
 }
 
-.posicionamento > section {
-  display: flex;
-  gap: 48px;
-  max-width: 1100px;
-  margin: 0 auto 56px;
+.posicionamento-textos {
+  max-width: 520px;
 }
 
 .posicionamento h2 {
-  flex: 1;
-  font-size: 32px;
+  font-size: 34px;
   line-height: 1.3;
   color: var(--verde-limao);
+  margin-bottom: 20px;
 }
 
 .posicionamento p {
-  flex: 1;
   font-size: 16px;
-  line-height: 1.6;
-}
-
-.posicionamento img {
-  margin: 0 auto;
+  line-height: 1.7;
 }
 
 /* =========================
-   BLOCO 3 – FRASE DE CAMPANHA
+   BLOCO 3 – FRASE
 ========================= */
 .frase {
-  background-color: var(--verde-medio);
-  padding: 48px 24px;
+  background: linear-gradient(
+    to right,
+    var(--verde-escuro),
+    var(--verde-medio)
+  );
+  padding: 56px 24px;
   text-align: center;
 }
 
 .frase h2 {
   color: var(--texto-claro);
-  font-size: 34px;
+  font-size: 36px;
   font-weight: bold;
 }
 
@@ -109,12 +124,16 @@ section {
    BLOCO 4 – PRESIDENTE
 ========================= */
 .presidente {
-  background-color: var(--verde-medio);
-  padding: 72px 24px;
-  display: flex;
-  align-items: center;
+  background: linear-gradient(
+    to right,
+    var(--verde-medio),
+    var(--verde-limao)
+  );
+  padding: 80px 0;
+}
+
+.presidente-conteudo {
   justify-content: center;
-  gap: 56px;
 }
 
 .presidente img {
@@ -129,7 +148,7 @@ section {
 }
 
 .presidente-texto .cargo {
-  color: var(--verde-limao);
+  color: var(--verde-escuro);
   font-weight: bold;
   text-transform: uppercase;
   font-size: 14px;
@@ -137,7 +156,7 @@ section {
 
 .presidente-texto h2 {
   margin: 12px 0 16px;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .presidente-texto p {
@@ -147,36 +166,29 @@ section {
 
 /* =========================
    BLOCO 5 – CONSELHOS
-   (imagem única)
 ========================= */
 .conselhos {
   background-color: var(--off-white);
-  padding: 72px 24px;
-  text-align: center;
-}
-
-.conselhos img {
-  margin: 0 auto;
+  padding: 80px 0;
 }
 
 /* =========================
-   BLOCO 6 – CTA FINAL
+   BLOCO 6 – CTA
 ========================= */
 .cta {
   background-color: var(--verde-limao);
-  padding: 64px 24px;
-  text-align: center;
+  padding: 80px 0;
 }
 
 .cta img {
-  margin: 0 auto 32px;
+  margin-bottom: 32px;
 }
 
 .cta p {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
   color: var(--verde-escuro);
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 /* =========================
@@ -186,12 +198,6 @@ section {
   display: flex;
   justify-content: center;
   gap: 28px;
-}
-
-.redes a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .redes img {
@@ -208,17 +214,94 @@ section {
    RESPONSIVO
 ========================= */
 @media (max-width: 768px) {
-  .posicionamento > section {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .presidente {
+  .conteudo {
     flex-direction: column;
     text-align: center;
   }
 
   .presidente img {
     max-width: 280px;
+  }
+}
+
+
+/* =========================
+   BLOCO CONSELHOS COMPLETO
+========================= */
+.conselhos-completo {
+  background-color: var(--off-white);
+}
+
+/* faixa verde com fotos */
+.conselhos-fotos {
+  background-color: var(--verde-medio);
+  padding: 20px 0;
+}
+
+.conselhos-fotos img {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* textos */
+.conselhos-textos {
+  align-items: flex-start;
+  padding: 64px 24px;
+}
+
+.conselhos-textos .coluna {
+  flex: 1;
+}
+
+.conselhos-textos h3 {
+  color: var(--verde-medio);
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.conselhos-textos p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: var(--texto-escuro);
+}
+
+/* =========================
+   BLOCO #EUVOTOCHAPA1
+========================= */
+.voto {
+  background: linear-gradient(
+    to right,
+    var(--verde-escuro),
+    var(--verde-limao)
+  );
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.voto h2 {
+  color: var(--branco);
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.voto h2 span {
+  color: var(--verde-limao);
+}
+
+/* =========================
+   RESPONSIVO CONSELHOS
+========================= */
+@media (max-width: 768px) {
+
+  .conselhos-textos {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .voto h2 {
+    font-size: 34px;
   }
 }
