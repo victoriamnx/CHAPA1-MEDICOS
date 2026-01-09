@@ -10,7 +10,7 @@
 <body>
 
   <section class="bloco-hero">
-    <img src="components/images/BANNER-TOPO.png" alt="Banner Principal Dra. Izabela Parente">
+    <img src="components/images/BANNER-TOPO.png" alt="Banner Principal">
   </section>
 
   <main class="bloco-principal">
@@ -38,11 +38,12 @@
       
       <div class="card-presidente">
         <div class="foto-fundo-verde">
-            <img id="foto" src="components/images/IZABELA-FOTO 1.svg" alt="Dra. Izabela">
+            <img id="foto" src="components/images/IZABELA-FOTO 1.svg" alt="Foto Médico">
         </div>
         <div class="info-presidente">
           <span class="tag-cargo" id="cargo">Presidente</span>
-          <h2 class="nome-presidente" id="nome">Dra. Izabela Parente</h2>
+          <h2 class="nome-presidente" id="nome">Dra. Izabela<br>Parente</h2>
+          <p class="crm-text" id="crm">CRM: 6370 RQE: 5293</p>
           <p class="mini-bio" id="descricao">
             É Médica Pediatra Neonatologista, com MBA em Gestão Sanitária pelo Centro de Estudos Financeiros de Madrid (CEF) e MBA em Gestão em Saúde pela FGV. Ex-presidente da Cooperativa dos Pediatras (COOPED).
           </p>
@@ -75,7 +76,7 @@
             <p><strong>Dra Priscilla Rodrigues</strong> Médica Dermatologista</p>
             <p><strong>Dra Raquel Kanthack</strong> Médica Cardiologista</p>
             <p><strong>Dr Bruno Medeiros</strong> Médico Cirurgião Geral e Coloproctologista</p>
-            <p><strong>Dr Felipe Lima</strong> Médico Anestesiologista</p>
+            <p><strong>Dr Felipe Lima</strong> Médica Anestesiologista</p>
         </div>
       </div>
     </div>
@@ -99,42 +100,60 @@
       {
         foto: "components/images/IZABELA-FOTO 1.svg",
         cargo: "Presidente",
-        nome: "Dra. Izabela Parente",
+        nome: "Dra. Izabela<br>Parente",
+        crm: "CRM: 6370 RQE: 5293",
         descricao: "É Médica Pediatra Neonatologista, com MBA em Gestão Sanitária pelo Centro de Estudos Financeiros de Madrid (CEF) e MBA em Gestão em Saúde pela FGV. Ex-presidente da Cooperativa dos Pediatras (COOPED)."
       },
       {
         foto: "components/images/cadufoto.png",
-        cargo: "Diretor Administrativo",
-        nome: "Dr. Lucas Gonzaga",
-        descricao: "Médico Radiologista, com forte atuação na gestão administrativa e no fortalecimento da cooperativa."
+        cargo: "Diretor Administrativo Financeiro",
+        nome: "Dr. Carlos<br>Eduardo Queiroz",
+        crm: "CRM: 9104 RQE: 7304",
+        descricao: "É Médico Cirurgião do Aparelho Digestivo pela USP, com MBA em Gestão Empresarial pela FGV e em Finanças pela St. Paul Escola de Negócios e Mestrando em Gestão de Cooperativas pela PUC-PR."
       },
       {
         foto: "components/images/douglasfoto.png",
         cargo: "Diretor Administrativo",
-        nome: "Dr. Lucas Gonzaga",
-        descricao: "Médico Radiologista, com forte atuação na gestão administrativa e no fortalecimento da cooperativa."
-      },  {
+        nome: "Dr. Douglas<br>Campos",
+        crm: "CRM: 10452 RQE: 6521",
+        descricao: "É Médico Intensivista, formado pela UFC, com título de especialista pela AMIB. Possui pós-graduação em Gestão de Negócios da Saúde pela Fundação Dom Cabral."
+      },
+      {
         foto: "components/images/fernandafoto.png",
-        cargo: "Diretor Administrativo",
-        nome: "Dr. Lucas Gonzaga",
-        descricao: "Médico Radiologista, com forte atuação na gestão administrativa e no fortalecimento da cooperativa."
-      },  {
+        cargo: "Diretora Administrativa",
+        nome: "Dra. Fernanda<br>Ara",
+        crm: "CRM: 11230 RQE: 8441",
+        descricao: "É Médica Anestesiologista, Doutora em Ciências pela USP e pós-graduada em Gestão de Negócios da Saúde pela Fundação Dom Cabral."
+      },
+      {
         foto: "components/images/pedrofoto.png",
         cargo: "Diretor Administrativo",
-        nome: "Dr. Lucas Gonzaga",
-        descricao: "Médico Radiologista, com forte atuação na gestão administrativa e no fortalecimento da cooperativa."
+        nome: "Dr. Pedro<br>Coutinho",
+        crm: "CRM: 9875 RQE: 5542",
+        descricao: "É Médico Ortopedista, com atuação em cirurgia de coluna vertebral, MBA em Gestão de Negócios em Saúde e Mestrado em Ciências pela USP."
       }
     ];
 
     let index = 0;
+
     function updateSlide() {
-      document.getElementById("foto").src = slides[index].foto;
-      document.getElementById("cargo").innerText = slides[index].cargo;
-      document.getElementById("nome").innerText = slides[index].nome;
-      document.getElementById("descricao").innerText = slides[index].descricao;
+      const s = slides[index];
+      document.getElementById("foto").src = s.foto;
+      document.getElementById("cargo").innerText = s.cargo;
+      document.getElementById("nome").innerHTML = s.nome; // innerHTML permite o <br>
+      document.getElementById("crm").innerText = s.crm;
+      document.getElementById("descricao").innerText = s.descricao;
     }
-    function nextSlide() { index = (index + 1) % slides.length; updateSlide(); }
-    function prevSlide() { index = (index - 1 + slides.length) % slides.length; updateSlide(); }
+
+    function nextSlide() {
+      index = (index + 1) % slides.length;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      index = (index - 1 + slides.length) % slides.length;
+      updateSlide();
+    }
   </script>
 </body>
 </html>

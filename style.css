@@ -53,6 +53,21 @@ img { max-width: 100%; display: block; }
 .nome-presidente { font-size: 32px; margin: 10px 0; }
 .mini-bio { font-size: 15px; line-height: 1.5; opacity: 0.9; }
 
+.nome-presidente {
+  font-size: 42px; /* Tamanho grande para forçar a estética do layout */
+  line-height: 1.1;
+  margin: 5px 0;
+  font-weight: 900;
+  color: white;
+}
+
+.crm-text {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+}
+
 .arrow { background: none; border: none; color: white; font-size: 50px; cursor: pointer; }
 
 /* BLOCO 3: FINAL */
@@ -83,3 +98,4 @@ img { max-width: 100%; display: block; }
   .grid-nomes-tecnicos { grid-template-columns: 1fr; }
   .foto-fundo-verde { margin: 0 auto; }
 }
+
