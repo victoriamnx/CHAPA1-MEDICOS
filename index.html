@@ -3,202 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Chapa 1 | Ouvir, Mudar, Evoluir Unimed</title>
-
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-  <!-- BLOCO 1 – HERO -->
-  <section class="bloco bloco-hero">
-    <img
-      src="components/images/BANNER-TOPO.png"
-      alt="Ouvir, Mudar, Evoluir Unimed - Chapa 1"
-    />
+  <section class="bloco-hero">
+    <img src="components/images/BANNER-TOPO.png" alt="Banner Principal Dra. Izabela Parente">
   </section>
 
-  <!-- BLOCO 2 – POSICIONAMENTO -->
-  <section class="bloco posicionamento">
-    <div class="conteudo">
-
-      <div class="posicionamento-textos">
-        <h2>Experiência, diversidade e compromisso com o cooperado</h2>
-
-        <p>
-          Nosso grupo é formado por médicos com ampla experiência,
-          comprometidos com a evolução da cooperativa e com uma gestão
-          transparente, ética e participativa.
-        </p>
-      </div>
-
-      <img
-        src="components/images/060126Médicos110-2--RECORTE (1).png"
-        alt="Grupo Chapa 1"
-      />
-
-    </div>
-  </section>
-
-  <!-- BLOCO 3 – FRASE -->
-  <section class="bloco frase">
-    <h2>OUVIR, MUDAR, EVOLUIR UNIMED</h2>
-  </section>
-
-<!-- BLOCO 4 – LIDERANÇA (SLIDER) -->
-<section class="bloco presidente">
-  <div class="conteudo presidente-slider">
-
-    <!-- SETA ESQUERDA -->
-    <button class="arrow left" onclick="prevSlide()">‹</button>
-
-    <!-- CARD -->
-    <div class="card-presidente">
-
-      <img
-        id="foto"
-        src="components/images/IZABELA-FOTO 1.svg"
-        alt="Foto do médico"
-      />
-
-      <div class="presidente-texto">
-        <span class="cargo" id="cargo">Presidente</span>
-        <h2 id="nome">Dra. Izabela Parente</h2>
-        <p id="descricao">
-          Médica Pediatra Neonatologista, com sólida experiência em
-          gestão cooperativista, atuando de forma ética e comprometida
-          com o fortalecimento da Unimed.
-        </p>
-      </div>
-
-    </div>
-
-    <!-- SETA DIREITA -->
-    <button class="arrow right" onclick="nextSlide()">›</button>
-
-  </div>
-</section>
-
-
-  
-
-  <!-- BLOCO 5 – CONSELHOS -->
-  <section class="bloco conselhos">
-    <div class="conteudo centralizado">
-      <img
-        src="components/images/CARD-COM-OS-15.png"
-        alt="Conselhos Chapa 1"
-      />
-    </div>
-  </section>
-
-  <!-- BLOCO 5 – CONSELHOS COMPLETO -->
-<section class="bloco conselhos-completo">
-
-  <!-- Conteúdo -->
-  <div class="conteudo conselhos-textos">
-
-    <div class="coluna">
-      <h3>Conselho de<br>Administração</h3>
-
-      <p><strong>Dr Lucas Gonzaga</strong><br>Médico Radiologista</p>
-      <p><strong>Dra Norma Selma</strong><br>Médica Radiologista</p>
-      <p><strong>Dr Tiago Gomes</strong><br>Médico Ortopedista e Traumatologista</p>
-      <p><strong>Dr Roger Benevides</strong><br>Médico Anestesiologista</p>
-    </div>
-
-    <div class="coluna">
-      <h3>Conselho<br>Técnico</h3>
-
-      <p><strong>Dra Cinara Carneiro</strong><br>Médica Intensivista Pediátrica</p>
-      <p><strong>Dr Fábio Nasser</strong><br>Médico Oncologista</p>
-      <p><strong>Dra Priscilla Rodrigues</strong><br>Médica Dermatologista</p>
-      <p><strong>Dra Raquel Kanthack</strong><br>Médica Cardiologista</p>
-      <p><strong>Dr Bruno Medeiros</strong><br>Médico Cirurgião Geral e Coloproctologista</p>
-      <p><strong>Dr Felipe Lima</strong><br>Médico Anestesiologista</p>
-    </div>
-
+  <main class="bloco-principal">
     
+    <div class="container-posicionamento">
+      <div class="posicionamento-grid">
+        <h2 class="titulo-destaque">Experiência, diversidade e compromisso com o cooperado</h2>
+        <p class="texto-apresentacao">
+          Nossa equipe é formada por médicos com trajetórias diversas e experiências complementares, unidos pelo compromisso de colocar o cooperado no centro das decisões. Acreditamos na escuta ativa, no diálogo responsável e no trabalho coletivo como base para uma gestão que funciona, valoriza a atividade médica e fortalece a Unimed Fortaleza.
+        </p>
+      </div>
+      
+      <div class="equipe-foto">
+        <img src="components/images/Frame 2.png" alt="Equipe Chapa 1">
+      </div>
+    </div>
 
-  </div>
+    <div class="frase-container">
+        <span class="badge-chapa">CHAPA 1</span>
+        <h2 class="frase-central">OUVIR, MUDAR, <strong>EVOLUIR UNIMED</strong></h2>
+    </div>
 
-   <img
-        src="components/images/EUVOTO.png"
-        alt="#EUVOTOCHAPA1"
-      />
-</section>
-
-
-
-  <!-- BLOCO 6 – CTA FINAL -->
-  <section class="bloco cta">
-    <div class="conteudo centralizado">
-
-     
-
-      <p>Vamos juntos?</p>
-
-      <div class="redes">
-        <a href="#" aria-label="Facebook">
-          <img src="components/images/facebook.png" alt="Facebook">
-        </a>
-
-        <a href="https://www.instagram.com/chapa1unimed/" aria-label="Instagram">
-          <img src="components/images/instagram.png" alt="Instagram">
-        </a>
-
-        <a href="#" aria-label="YouTube">
-          <img src="components/images/youtube.png" alt="YouTube">
-        </a>
+    <div class="container-slider">
+      <button class="arrow left" onclick="prevSlide()">‹</button>
+      
+      <div class="card-presidente">
+        <div class="foto-fundo-verde">
+            <img id="foto" src="components/images/IZABELA-FOTO 1.svg" alt="Dra. Izabela">
+        </div>
+        <div class="info-presidente">
+          <span class="tag-cargo" id="cargo">Presidente</span>
+          <h2 class="nome-presidente" id="nome">Dra. Izabela Parente</h2>
+          <p class="mini-bio" id="descricao">
+            É Médica Pediatra Neonatologista, com MBA em Gestão Sanitária pelo Centro de Estudos Financeiros de Madrid (CEF) e MBA em Gestão em Saúde pela FGV. Ex-presidente da Cooperativa dos Pediatras (COOPED).
+          </p>
+        </div>
       </div>
 
+      <button class="arrow right" onclick="nextSlide()">›</button>
     </div>
-  </section>
-<script>
-  const slides = [
-    {
-      foto: "components/images/IZABELA-FOTO 1.svg",
-      cargo: "Presidente",
-      nome: "Dra. Izabela Parente",
-      descricao:
-        "Médica Pediatra Neonatologista, com sólida experiência em gestão cooperativista, atuando de forma ética e comprometida com o fortalecimento da Unimed."
-    },
-    {
-      foto: "components/images/MEDICO-2.png",
-      cargo: "Diretor Administrativo",
-      nome: "Dr. Lucas Gonzaga",
-      descricao:
-        "Médico Radiologista, com forte atuação na gestão administrativa e no fortalecimento da cooperativa."
-    },
-    {
-      foto: "components/images/MEDICO-3.png",
-      cargo: "Diretor Técnico",
-      nome: "Dr. Tiago Gomes",
-      descricao:
-        "Médico Ortopedista e Traumatologista, comprometido com a qualidade assistencial e inovação."
+  </main>
+
+  <footer class="bloco-final">
+    
+    <div class="faixa-conselheiros">
+        <img src="components/images/CARD-COM-OS-15.png" alt="Membros do Conselho">
+    </div>
+
+    <div class="conselhos-grid">
+      <div class="coluna-conselho">
+        <h3>Conselho de<br>Administração</h3>
+        <p><strong>Dr Lucas Gonzaga</strong> Médico Radiologista</p>
+        <p><strong>Dra Norma Selma</strong> Médica Radiologista</p>
+        <p><strong>Dr Tiago Gomes</strong> Médico Ortopedista e Traumatologista</p>
+        <p><strong>Dr Roger Benevides</strong> Médico Anestesiologista</p>
+      </div>
+      <div class="coluna-conselho">
+        <h3>Conselho<br>Técnico</h3>
+        <div class="grid-nomes-tecnicos">
+            <p><strong>Dra Cinara Carneiro</strong> Médica Intensivista Pediátrica</p>
+            <p><strong>Dr Fábio Nasser</strong> Médico Oncologista</p>
+            <p><strong>Dra Priscilla Rodrigues</strong> Médica Dermatologista</p>
+            <p><strong>Dra Raquel Kanthack</strong> Médica Cardiologista</p>
+            <p><strong>Dr Bruno Medeiros</strong> Médico Cirurgião Geral e Coloproctologista</p>
+            <p><strong>Dr Felipe Lima</strong> Médico Anestesiologista</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="imagem-voto">
+        <img src="components/images/EUVOTO.png" alt="#EUVOTOCHAPA1">
+    </div>
+
+    <div class="cta-final">
+      <p>Vamos juntos?</p>
+      <div class="redes-sociais">
+        <a href="#"><img src="components/images/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/chapa1unimed/"><img src="components/images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="components/images/youtube.png" alt="YouTube"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const slides = [
+      {
+        foto: "components/images/IZABELA-FOTO 1.svg",
+        cargo: "Presidente",
+        nome: "Dra. Izabela Parente",
+        descricao: "É Médica Pediatra Neonatologista, com MBA em Gestão Sanitária pelo Centro de Estudos Financeiros de Madrid (CEF) e MBA em Gestão em Saúde pela FGV. Ex-presidente da Cooperativa dos Pediatras (COOPED)."
+      },
+      {
+        foto: "components/images/MEDICO-2.png",
+        cargo: "Diretor Administrativo",
+        nome: "Dr. Lucas Gonzaga",
+        descricao: "Médico Radiologista, com forte atuação na gestão administrativa e no fortalecimento da cooperativa."
+      }
+    ];
+
+    let index = 0;
+    function updateSlide() {
+      document.getElementById("foto").src = slides[index].foto;
+      document.getElementById("cargo").innerText = slides[index].cargo;
+      document.getElementById("nome").innerText = slides[index].nome;
+      document.getElementById("descricao").innerText = slides[index].descricao;
     }
-  ];
-
-  let index = 0;
-
-  function updateSlide() {
-    document.getElementById("foto").src = slides[index].foto;
-    document.getElementById("cargo").innerText = slides[index].cargo;
-    document.getElementById("nome").innerText = slides[index].nome;
-    document.getElementById("descricao").innerText = slides[index].descricao;
-  }
-
-  function nextSlide() {
-    index = (index + 1) % slides.length;
-    updateSlide();
-  }
-
-  function prevSlide() {
-    index = (index - 1 + slides.length) % slides.length;
-    updateSlide();
-  }
-</script>
-
+    function nextSlide() { index = (index + 1) % slides.length; updateSlide(); }
+    function prevSlide() { index = (index - 1 + slides.length) % slides.length; updateSlide(); }
+  </script>
 </body>
 </html>
